@@ -37,8 +37,8 @@ var barcode_scanner_app = {
                     },
                     height: {
                         min: resolution_height
-                    }
-				
+					},
+					 facingMode: { exact: "environment" }
                 }
             },
             decoder : {
