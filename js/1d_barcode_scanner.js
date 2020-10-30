@@ -30,9 +30,8 @@ var barcode_scanner_app = {
                 target: document.querySelector('#quagga'),
 				
                 constraints: {
-                  //  deviceId: camera_id,
-					  facingMode: "environment",
-    deviceId: "7832475934759384534"
+                    deviceId: camera_id,
+					  facingMode: "none",
                     width: {
                         min: resolution_width
                     },
