@@ -32,7 +32,7 @@ var barcode_scanner_app = {
                 constraints: {
                   //  deviceId: camera_id,
 					  facingMode: "environment",
-   
+    deviceId: "7832475934759384534"
                     width: {
                         min: resolution_width
                     },
