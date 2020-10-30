@@ -31,14 +31,15 @@ var barcode_scanner_app = {
 				
                 constraints: {
                     deviceId: camera_id,
-					  facingMode: "none",
+			
                     width: {
                         min: resolution_width
                     },
                     height: {
                         min: resolution_height
 					},
-					facingMode: "environment"
+					 facingMode: { exact: "environment" }
+					
                 }
             },
             decoder : {
