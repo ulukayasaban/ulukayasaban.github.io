@@ -37,7 +37,9 @@ var barcode_scanner_app = {
                     height: {
                         min: resolution_height
                     },
-					facingMode: "user"
+					video: {
+    facingMode: 'environment'
+};
                 }
             },
             decoder : {
