@@ -55,7 +55,7 @@ navigator.mediaDevices.enumerateDevices()
                 name : "Live",
                 type : "LiveStream",
                 target: document.querySelector('#quagga'),
-				facingMode:"environment"
+				//facingMode:"environment"
                 constraints: {
                     deviceId: camera_id,
 			
