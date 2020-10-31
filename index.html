@@ -1,19 +1,27 @@
-<!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-	
-	
-	
-	<script src="quagga.min.js"></script>
-	<script src="barcodoce.js"></script>
-</head>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
+    <script type="text/javascript" src="js/instascan.min.js"></script>
+    <script type="text/javascript" src="js/quagga.min.js"></script>
+    <script type="text/javascript" src="js/qr_barcode_scanner.js"></script>
+    <script type="text/javascript" src="js/1d_barcode_scanner.js"></script>
+    <script type="text/javascript" src="js/barcode_controls.js"></script>
+  </head>
+  <body>
+    <h1>Barcode Scanner</h1>
+    <p>Place the barcode in front of the camera so it's completely in view.</p>
+    
+    <select id="barcode-selector">
+      <option value="">Select a type of barcode to scan</option>
+      <option value="1d">Scan 1D Barcode</option>
+      <option value="qr">Scan QR Barcode</option>
+    </select>
+    <br>
 
-<body>
-	
-	
-	<video id="barcode-capture"></video>
+    <!-- For QR barcodes -->
+    <video id="barcode-capture"></video>
     <h3 id="barcode-result"></h3>
     
     <!-- For 1D barcodes -->
@@ -21,10 +29,6 @@
     <div id="result_strip">
       <ul class="thumbnails"></ul>
     </div>
-	
-	
-	
-	
-	
-</body>
+    
+  </body>
 </html>
