@@ -18,10 +18,37 @@ var barcode_scanner_app = {
         this.quagga_init(false, capabilities["width"]["max"], capabilities["height"]["max"])
     },
     
+	
+	
+	
+	
+	if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
+  console.log("enumerateDevices() not supported.");
+  return;
+}
+
+// List cameras and microphones.
+
+navigator.mediaDevices.enumerateDevices()
+.then(function(devices) {
+  devices.forEach(function(device) {
+    console.log(device.kind + ": " + device.label +
+                " id = " + device.deviceId);
+  });
+})
+.catch(function(err) {
+  console.log(err.name + ": " + err.message);
+});
+	
+	
+
+
+
+	
     quagga_init: function(set_defaults, resolution_width, resolution_height){
         var camera_id = undefined
         Quagga.CameraAccess.enumerateVideoDevices().then(function(cameras) {
-         // camera_id = cameras[cameras.length - 1]["deviceId"]
+          camera_id = cameras[cameras.length - 1]["deviceId"]
         })
         Quagga.init({
             inputStream : {
@@ -30,7 +57,7 @@ var barcode_scanner_app = {
                 target: document.querySelector('#quagga'),
 				//facingMode:"environment"
                 constraints: {
-                  //  deviceId: camera_id,
+                    deviceId: camera_id,
 			
                     width: {
                         min: resolution_width
