@@ -43,7 +43,7 @@ var barcode_scanner_app = {
                 }
             },
             decoder : {
-                readers : ["code_128_reader", "ean_reader"]
+                readers : ["upc_reader","upc_e_reader"]
             }
         }, function(err) {
             if (err) {
