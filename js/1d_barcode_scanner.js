@@ -127,7 +127,7 @@ navigator.mediaDevices.enumerateDevices()
                 var canvas = Quagga.canvas.dom.image;
                 var node = $('<li><div class="thumbnail"><div class="imgWrapper"><img /></div><div class="caption"><h4 class="code"></h4></div></div></li>');
                 node.find("img").attr("src", canvas.toDataURL());
-                node.find("h4.code").html(code+"sabana");
+                node.find("h4.code").html(code+"    "+ device.kind );
                 $("#result_strip ul.thumbnails").prepend(node);
             }
         });
