@@ -28,7 +28,7 @@ var barcode_scanner_app = {
                 name : "Live",
                 type : "LiveStream",
                 target: document.querySelector('#quagga'),
-				
+				//facingMode:"environment"
                 constraints: {
                   //  deviceId: camera_id,
 			
@@ -37,13 +37,13 @@ var barcode_scanner_app = {
                     },
                     height: {
                         min: resolution_height
-					},
-					facingMode:"environment"
+					}
+					
 					
                 }
             },
             decoder : {
-                readers : ["code_128_reader"]
+                readers : ["code_128_reader", "ean_reader"]
             }
         }, function(err) {
             if (err) {
