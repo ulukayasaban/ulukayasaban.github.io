@@ -125,9 +125,9 @@ navigator.mediaDevices.enumerateDevices()
                 console.log(result)
                 this.last_result = code;
                 var canvas = Quagga.canvas.dom.image;
-                var node = $('<li><div class="thumbnail"><div class="imgWrapper"><img /></div><div class="caption"><h4 class="code"></h4><br><h4 class="device.kind"></h4></div></div></li>');
+                var node = $('<li><div class="thumbnail"><div class="imgWrapper"><img /></div><div class="caption"><h4 class="code"></h4></div></div></li>');
                 node.find("img").attr("src", canvas.toDataURL());
-                node.find("h4.code").html(code);
+                node.find("h4.code").html(code+"saban");
                 $("#result_strip ul.thumbnails").prepend(node);
             }
         });
