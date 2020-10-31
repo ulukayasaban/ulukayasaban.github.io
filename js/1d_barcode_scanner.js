@@ -16,26 +16,60 @@ var barcode_scanner_app = {
         Quagga.stop()
         // restart with max zoom and resolution
         this.quagga_init(false, capabilities["width"]["max"], capabilities["height"]["max"])
-    },
-    
+    },	
     quagga_init: function(set_defaults, resolution_width, resolution_height){
         var camera_id = undefined
         Quagga.CameraAccess.enumerateVideoDevices().then(function(cameras) {
           camera_id = cameras[cameras.length - 1]["deviceId"]
+			
+			
+			
+			
+			
+			//
+			if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
+  console.log("enumerateDevices() not supported.");
+  return;
+}
+			
+
+// List cameras and microphones.
+
+navigator.mediaDevices.enumerateDevices()
+.then(function(devices) {
+  devices.forEach(function(device) {
+    console.log(device.kind + ": " + device.label +
+                " id = " + device.deviceId);
+  });
+})
+.catch(function(err) {
+  console.log(err.name + ": " + err.message);
+});//
+			
+			
+			
+			
+			
+			
+			
         })
         Quagga.init({
             inputStream : {
                 name : "Live",
                 type : "LiveStream",
                 target: document.querySelector('#quagga'),
+				//facingMode:"environment"
                 constraints: {
                     deviceId: camera_id,
+			
                     width: {
                         min: resolution_width
                     },
                     height: {
                         min: resolution_height
-                    }
+					}
+					
+					
                 }
             },
             decoder : {
@@ -93,9 +127,13 @@ var barcode_scanner_app = {
                 var canvas = Quagga.canvas.dom.image;
                 var node = $('<li><div class="thumbnail"><div class="imgWrapper"><img /></div><div class="caption"><h4 class="code"></h4></div></div></li>');
                 node.find("img").attr("src", canvas.toDataURL());
-                node.find("h4.code").html(code);
+                node.find("h4.code").html(code+"    "+ device.kind );
                 $("#result_strip ul.thumbnails").prepend(node);
             }
         });
     }
 }
+
+
+
+
