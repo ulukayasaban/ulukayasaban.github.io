@@ -71,8 +71,9 @@ Quagga.init({
                 console.log(data1);
             
                // document.querySelector('#resultado').innerHTML=data.codeResult.code;
-					document.querySelector('#resultado1').innerHTML=data1.codeResult.code;
-			
+					//document.querySelector('#resultado1').innerHTML=data1.codeResult.code;
+				barkodlar[0]=data1.codeResult.code;
+				document.querySelector('#resultado1').innerHTML=barkodlar[0];
         });
 			
 		}
@@ -86,6 +87,7 @@ Quagga.init({
                // document.querySelector('#resultado').innerHTML=data.codeResult.code;
 					document.querySelector('#resultado2').innerHTML=data2.codeResult.code;
 			
+				barkodlar[1]=data2.codeResult.code;
         });
 			
 		}
