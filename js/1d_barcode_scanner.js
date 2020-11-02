@@ -20,7 +20,7 @@ var barcode_scanner_app = {
     quagga_init: function(set_defaults, resolution_width, resolution_height){
         var camera_id = undefined
         Quagga.CameraAccess.enumerateVideoDevices().then(function(cameras) {
-          camera_id = cameras[cameras.length - 2]["deviceId"]
+          camera_id = cameras[cameras.length - 1]["deviceId"]
 			
 		
         })
@@ -29,10 +29,10 @@ var barcode_scanner_app = {
                 name : "Live",
                 type : "LiveStream",
                 target: document.querySelector('#quagga'),
-				//facingMode:"environment"
+				
                 constraints: {
                     deviceId: camera_id,
-			
+					facingMode:"environment"
                     width: {
                         min: resolution_width
                     },
