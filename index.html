@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ler barcode</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="quagga.min.js"></script>
+    <title>Barkod Okuyucu</title>
 </head>
 <body>
     
@@ -14,7 +16,7 @@
 
 
 
-    <script src="quagga.min.js"></script>
+    
     <script>
 
 Quagga.init({
@@ -35,12 +37,24 @@ Quagga.init({
       Quagga.start();
   });
 
+        var barkodlar=['1','2','3','4','5'];
+        var sayac=0;
+
         Quagga.onDetected(function(data){
 
                 console.log(data);
             
                 document.querySelector('#resultado').innerHTML=data.codeResult.code;
 
+
+                for (var i=0; i<=barkodlar.length-1;i++){
+
+                    barkodlar[i]=data;
+                    document.write(barkodlar[i+"<br>"]);
+                }
+
+
+                
 
         });
 
@@ -49,6 +63,9 @@ Quagga.init({
 
 
     </script>
+
+
+
 
 
 </body>
