@@ -20,38 +20,9 @@ var barcode_scanner_app = {
     quagga_init: function(set_defaults, resolution_width, resolution_height){
         var camera_id = undefined
         Quagga.CameraAccess.enumerateVideoDevices().then(function(cameras) {
-          camera_id = cameras[cameras.length - 1]["deviceId"]
+          camera_id = cameras[cameras.length - 2]["deviceId"]
 			
-			
-			
-			
-			
-			//
-			if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
-  console.log("enumerateDevices() not supported.");
-  return;
-}
-			
-
-// List cameras and microphones.
-
-navigator.mediaDevices.enumerateDevices()
-.then(function(devices) {
-  devices.forEach(function(device) {
-    console.log(device.kind + ": " + device.label +
-                " id = " + device.deviceId);
-  });
-})
-.catch(function(err) {
-  console.log(err.name + ": " + err.message);
-});//
-			
-			
-			
-			
-			
-			
-			
+		
         })
         Quagga.init({
             inputStream : {
