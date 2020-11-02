@@ -13,9 +13,13 @@
 	
 	
 	<div id="resultado1"></div>
+	<br>
 	<div id="resultado2"></div>
+	<br>
 	<div id="resultado3"></div>
+	<br>
 	<div id="resultado4"></div>
+	<br>
 	<div id="resultado5"></div>
     <!--<div id="resultado"></div>-->
 	
@@ -52,20 +56,19 @@ Quagga.init({
         var sayac=0;
 
 		for (var i=0; i<=5;i++){
-        Quagga.onDetected(function(data){
+        Quagga.onDetected(function(data4,data5,data1,data2,data3){
 
                 console.log(data);
             
                // document.querySelector('#resultado').innerHTML=data.codeResult.code;
-					document.querySelector('#resultado1').innerHTML=data.codeResult.code;
+					document.querySelector('#resultado1').innerHTML=data1.codeResult.code;
 			
-					var para = document.createElement("<br>");
-			var node = document.createTextNode("This is new.");
-para.appendChild(node);
-					document.querySelector('#resultado2').innerHTML=data.codeResult.code;
-					document.querySelector('#resultado3').innerHTML=data.codeResult.code;
-					document.querySelector('#resultado4').innerHTML=data.codeResult.code;
-					document.querySelector('#resultado5').innerHTML=data.codeResult.code;	
+					
+			
+					document.querySelector('#resultado2').innerHTML=data2.codeResult.code;
+					document.querySelector('#resultado3').innerHTML=data3.codeResult.code;
+					document.querySelector('#resultado4').innerHTML=data4.codeResult.code;
+					document.querySelector('#resultado5').innerHTML=data5.codeResult.code;	
 
                 
 
