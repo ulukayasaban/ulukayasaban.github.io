@@ -56,29 +56,13 @@ Quagga.init({
         var sayac=0;
 
 		
-        Quagga.onDetected(function(data4,data5,data1,data2,data3){
+        Quagga.onDetected(function(data1){
 
                 console.log(data1);
             
                // document.querySelector('#resultado').innerHTML=data.codeResult.code;
 					document.querySelector('#resultado1').innerHTML=data1.codeResult.code;
 			
-					
-			
-					document.querySelector('#resultado2').innerHTML=data2.codeResult.code;
-					document.querySelector('#resultado3').innerHTML=data3.codeResult.code;
-					document.querySelector('#resultado4').innerHTML=data4.codeResult.code;
-					document.querySelector('#resultado5').innerHTML=data5.codeResult.code;	
-
-                
-
-                    
-					
-                
-
-
-                
-
         });
 
 		
