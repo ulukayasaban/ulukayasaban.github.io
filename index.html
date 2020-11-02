@@ -1,34 +1,23 @@
+<!doctype html>
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
-    <script type="text/javascript" src="js/instascan.min.js"></script>
-    <script type="text/javascript" src="js/quagga.min.js"></script>
-    <script type="text/javascript" src="js/qr_barcode_scanner.js"></script>
-    <script type="text/javascript" src="js/1d_barcode_scanner.js"></script>
-    <script type="text/javascript" src="js/barcode_controls.js"></script>
-  </head>
-  <body>
-    <h1>Barcode Tarayıcı</h1>
-    <p>Barkodu tamamen görünecek şekilde kameranın önüne yerleştirin.</p>
-    
-    <select id="barcode-selector">
-      <option value="">Barkod Tipi Seç</option>
-      <option value="1d">1D Barcode Taraa</option>
-      <option value="qr">QR kod barkod </option>
-    </select>
-    <br>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	
+	
+	<script type="text/javascript" src="saban.js"></script>
+	
+	
+	
+</head>
 
-    <!-- For QR barcodes -->
-    <video id="barcode-capture"></video>
-    <h3 id="barcode-result"></h3>
-    
-    <!-- For 1D barcodes -->
-    <div id="quagga"></div>
-    <div id="result_strip">
-      <ul class="thumbnails"></ul>
-    </div>
-    
-  </body>
+<body>
+	
+	
+	<video id="video" width="640" height="480" autoplay></video>
+	
+	
+	
+	
+</body>
 </html>
