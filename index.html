@@ -51,6 +51,7 @@ Quagga.init({
         var barkodlar=['1','2','3','4','5'];
         var sayac=0;
 
+		for (var i=0; i<=5;i++){
         Quagga.onDetected(function(data){
 
                 console.log(data);
@@ -62,18 +63,18 @@ Quagga.init({
 					document.querySelector('#resultado4').innerHTML=data.codeResult.code;
 					document.querySelector('#resultado5').innerHTML=data.codeResult.code;	
 
-                for (var i=0; i<=5;i++){
+                
 
                     
 					
-                }
+                
 
 
                 
 
         });
 
-
+		}
 
 
 
