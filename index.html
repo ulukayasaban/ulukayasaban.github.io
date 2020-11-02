@@ -49,8 +49,10 @@ Quagga.init({
 
                 for (var i=0; i<=barkodlar.length-1;i++){
 
-                    barkodlar[i]=data;
+                    barkodlar[i]=data.codeResult.code;
                     document.write(barkodlar[i+"<br>"]);
+                    document.querySelector('#resultado').innerHTML=barkodlar[i]+"<br>";
+
                 }
 
 
