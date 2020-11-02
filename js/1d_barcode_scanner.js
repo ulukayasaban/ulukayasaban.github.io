@@ -34,7 +34,7 @@ var barcode_scanner_app = {
                     deviceId: camera_id,
 					width:resolution_width,
 					height:resolution_height,
-					facingMode: "environment",
+					facingMode: "environment"
                     
 					
 					
@@ -58,7 +58,7 @@ var barcode_scanner_app = {
             }
         });
     },
-    /*
+    
     init: function(){
         this.quagga_init(true, 640, 480)
         
@@ -85,7 +85,7 @@ var barcode_scanner_app = {
                 }
             }
         });
-*/
+
 
         Quagga.onDetected(function(result) {
             var code = result.codeResult.code;
