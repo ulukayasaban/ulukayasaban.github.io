@@ -13,7 +13,14 @@
 	
 	
 	<div id="resultado1"></div>
-	
+	<br>
+	<div id="resultado2"></div>
+	<br>
+	<div id="resultado3"></div>
+	<br>
+	<div id="resultado4"></div>
+	<br>
+	<div id="resultado5"></div>
     <!--<div id="resultado"></div>-->
 	
 	
@@ -58,6 +65,14 @@ Quagga.init({
 			
         });
 
+		Quagga.onDetected(function(data2){
+
+                console.log(data2);
+            
+               // document.querySelector('#resultado').innerHTML=data.codeResult.code;
+					document.querySelector('#resultado2').innerHTML=data2.codeResult.code;
+			
+        });
 		
 
 
