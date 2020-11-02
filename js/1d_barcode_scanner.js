@@ -20,8 +20,8 @@ var barcode_scanner_app = {
     quagga_init: function(set_defaults, resolution_width, resolution_height){
         var camera_id = undefined
         Quagga.CameraAccess.enumerateVideoDevices().then(function(cameras) {
-          camera_id = cameras[cameras.length - 2]["deviceId"]
-			 console.log("loggg444: "+(cameras)+"    " +["deviceId"])
+          camera_id = cameras[cameras.length - 1]["deviceId"]
+			 console.log("loggg444: "+(camera_id)+"    " +["deviceId"])
 		
         })
         Quagga.init({
