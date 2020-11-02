@@ -47,11 +47,10 @@ Quagga.init({
                 document.querySelector('#resultado').innerHTML=data.codeResult.code;
 
 
-                for (var i=0; i<=barkodlar.length-1;i++){
+                for (var i=0; i<=5;i++){
 
-                    barkodlar[i]=data.codeResult.code;
-                    document.write(barkodlar[i+"<br>"]);
-                    document.querySelector('#resultado').innerHTML=barkodlar[i]+"<br>";
+                    document.querySelector('#resultado').innerHTML=data.codeResult.code;
+					"<br>"
 
                 }
 
