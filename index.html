@@ -68,17 +68,35 @@ Quagga.init({
 				
 				
 				
-				barkodlar[sayac]=data1.codeResult.code;
-								
-				sayac++;
-				document.querySelector('#resultado1').innerHTML="sayac: "+ sayac;
-				document.querySelector('#resultado2').innerHTML=data1.codeResult.code;
+				
 
 				if(sayac==200){
 					Quagga.stop();
 					
 					document.querySelector('#resultado3').innerHTML="sayac durdu";
 					break;
+				}
+				else{
+					
+					
+					
+					
+					for(i=0;i<-1;i++){
+					
+						barkodlar[sayac]=data1.codeResult.code;
+								
+				sayac++;
+				document.querySelector('#resultado1').innerHTML="sayac: "+ sayac;
+				document.querySelector('#resultado2').innerHTML=data1.codeResult.code;
+						
+						
+				}
+					
+					
+					
+					
+					
+					
 				}
 				
 				
