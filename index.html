@@ -50,7 +50,9 @@ Quagga.init({
           return
       }
       console.log("Initialization finished. Ready to start");
+	document.querySelector('#resultad2').innerHTML="okunuyor";
       Quagga.start();
+	
   });
 
         var barkodlar=['1','2','3','4','5'];
@@ -63,8 +65,10 @@ Quagga.init({
 			
 			
 			
-			document.querySelector('#resultad2').innerHTML="okunuyor";
-		for (i=0;i<=50;i++){
+			
+		
+		
+		
 			
 			Quagga.onDetected(function(data1){
             
@@ -81,7 +85,7 @@ Quagga.init({
         });
 			
 			
-		}
+		
 		
 		
 		
