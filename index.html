@@ -62,20 +62,27 @@ Quagga.init({
 		
 			
 			
+			
+			document.querySelector('#resultad2').innerHTML="okunuyor";
+		for (i=0;i<=50;i++){
+			
 			Quagga.onDetected(function(data1){
             
                // document.querySelector('#resultado').innerHTML=data.codeResult.code;
 			   //document.querySelector('#resultado1').innerHTML=data1.codeResult.code;
 				
+				barkodlar[i]=data1.codeResult.code;
 				
-				document.querySelector('#resultad2').innerHTML="okunuyor";
-					document.querySelector('#resultad3').innerHTML=data1.codeResult.code;
-				document.querySelector('#resultad1').innerHTML=data1.codeResult.code;
+					document.querySelector('#resultad3').innerHTML=barkodlar[i];
+				
 				
 				
 				
         });
 			
+			
+		}
+		
 		
 		
 		
