@@ -71,16 +71,25 @@ Quagga.init({
 				
 				
 				barkodlar[sayac]=data1.codeResult.code;
-				document.querySelector('#resultado1').innerHTML=barkodlar[sayac];
+				//document.querySelector('#resultado1').innerHTML=barkodlar[sayac];
 				
 				sayac++;
 				document.querySelector('#resultado2').innerHTML="sayac: "+ sayac;
+				
+				
+				if (sayac==50){
+					continue git;
+					clearTimeout(bbb);
+					Quagga.stop();
+				}
 				
 				
 				
         });
 			
 		}
+		
+		git:Quagga.stop();
 		
 		
 		
