@@ -273,7 +273,7 @@ Quagga.init({
     inputStream : {
       name : "Live",
       type : "LiveStream",
-      target: document.querySelector('#card-body')   
+      target: document.querySelector('#card-img-top')   
     },
     decoder : {
       readers : ["code_128_reader", "ean_reader"]
@@ -312,7 +312,7 @@ Quagga.init({
 				
 				
 				
-					document.querySelector('#resultado1').innerHTML=data.codeResult.code;
+					document.querySelector('#card-img-top').innerHTML=data.codeResult.code;
 				
 				
 				
