@@ -72,9 +72,13 @@ Quagga.init({
 								
 				sayac++;
 				document.querySelector('#resultado1').innerHTML="sayac: "+ sayac;
-				document.querySelector('#resultado2').innerHTML=barkodlar[sayac];
+				document.querySelector('#resultado2').innerHTML=data1.codeResult.code;
 
-				
+				if(sayac==500){
+					Quagga.stop();
+					
+					document.querySelector('#resultado3').innerHTML="sayac durdu";
+				}
 				
 				
 				
