@@ -113,11 +113,12 @@ Quagga.init({
                // document.querySelector('#resultado').innerHTML=data.codeResult.code;
 			   //document.querySelector('#resultado1').innerHTML=data1.codeResult.code;
 				
+				sayac++;
 				
-				
+				barkodlar[sayac]=data.codeResult.code;
 					document.querySelector('#resultado1').innerHTML=data.codeResult.code;
 				
-				
+					document.querySelector('#resultado2').innerHTML=barkodlar[sayac];
 				
 				
         });
