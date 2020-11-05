@@ -59,16 +59,11 @@ Quagga.init({
 		
         
 		
-		setInterval(bbb,200)
-
-		setInterval(ccc,250)
-		
+		setInterval(bbb,200)		
 		
 		function bbb(){
 			
 			Quagga.onDetected(function(data1){
-
-                console.log(data1);
             
                // document.querySelector('#resultado').innerHTML=data.codeResult.code;
 			   //document.querySelector('#resultado1').innerHTML=data1.codeResult.code;
@@ -79,7 +74,7 @@ Quagga.init({
 				document.querySelector('#resultado1').innerHTML=barkodlar[sayac];
 				
 				sayac++;
-				document.querySelector('#resultado2').innerHTML=sayac;
+				document.querySelector('#resultado2').innerHTML="sayac: "+ sayac;
 				
 				
 				
@@ -91,27 +86,7 @@ Quagga.init({
 		
 		
 		
-		function ccc(){
-			
-			Quagga.onDetected(function(data2){
-
-                console.log(data2);
-            
-               // document.querySelector('#resultado').innerHTML=data.codeResult.code;
-				barkodlar[0]=data2.codeResult.code;
-					document.querySelector('#resultado2').innerHTML=data2.codeResult.code;
-			
-				document.querySelector('#resultado3').innerHTML=barkodlar[0]+" saban";
-				barkodlar[1]=data2.codeResult.code;
-				
-				
-				
-				
-				
-				
-        });
-			
-		}
+		
 		
 		
 		
