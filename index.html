@@ -111,7 +111,8 @@
 
         let dizi = [];
         let index = 0;
-        
+        let tekrar = [];
+
         Quagga.onDetected(function (data) {
 
             // document.querySelector('#resultado').innerHTML=data.codeResult.code;
@@ -121,23 +122,27 @@
 
             barkodlar[sayac] = data.codeResult.code;
             document.querySelector('#resultado1').innerHTML = data.codeResult.code;
+
             if (data.codeResult.code) {
                 if (index < 50) {
                     dizi.push(data.codeResult.code);
                     index++;
                 }
-                document.querySelector('#resultado2').innerHTML =index;
-               
+                
+
 
             }
 
+            if (dizi.find(data.codeResult.code)) { 
+                document.querySelector('#resultado2').innerHTML = "1";
+            }
 
 
 
         });
 
 
-        
+
 
 
 
