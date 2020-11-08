@@ -109,7 +109,7 @@
 
 
 
-
+let temp=[];
         Quagga.onDetected(function (data) {
 
             // document.querySelector('#resultado').innerHTML=data.codeResult.code;
@@ -121,7 +121,10 @@
             document.querySelector('#resultado1').innerHTML = data.codeResult.code;
             if(data.codeResult.code)
             {
-                document.querySelector('#resultado2').innerHTML = "1";
+                temp.push("1");
+                document.querySelector('#resultado2').innerHTML =temp;
+
+                
             }
             
 
