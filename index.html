@@ -114,7 +114,7 @@
         let index = 0;
         let tekrar = [];
         let deneme;
-        let sayac1=0;
+        let sayac1=50;
         let kontrol=0;
         
         Quagga.onDetected(function (data) {
@@ -140,7 +140,7 @@
 
             }
             for(let i=0;i<=dizi.length-1;i++){
-                sayac1++;
+                sayac1--;
                 if(dizi[i]==dizi[sayac1]){
                     kontrol++;
                     document.querySelector('#resultado1').innerHTML = kontrol;
