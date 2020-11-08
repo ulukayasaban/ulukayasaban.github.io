@@ -120,27 +120,27 @@
             barkodlar[sayac] = data.codeResult.code;
             document.querySelector('#resultado1').innerHTML = data.codeResult.code;
 
-           
+            let temp;
+            const card_hareket = setInterval(function () {
+
+                if (data.codeResult.code) {
+                    document.querySelector('#resultado2').innerHTML = "1";
+                }
+                else {
+                    document.querySelector('#resultado2').innerHTML = "0";
+                }
+
+
+            }, 200);
 
 
         });
 
 
-;
+        ;
 
 
-let temp;
-        const card_hareket = setInterval(function () {
 
-if(data.codeResult.code){
-    document.querySelector('#resultado2').innerHTML = "1";
-}
-else{
-    document.querySelector('#resultado2').innerHTML = "0";
-}
-
-
-         }, 200);
 
 
 
