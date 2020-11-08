@@ -109,8 +109,9 @@
 
 
 
-        let temp = [];
+        let dizi = [];
         let index = 0;
+        let n = 0;
         Quagga.onDetected(function (data) {
 
             // document.querySelector('#resultado').innerHTML=data.codeResult.code;
@@ -121,9 +122,36 @@
             barkodlar[sayac] = data.codeResult.code;
             document.querySelector('#resultado1').innerHTML = data.codeResult.code;
             if (data.codeResult.code) {
-                if (index < 10) {
+                if (index < 50) {
                     temp.push(data.codeResult.code);
                 }
+                index++;
+                if (index > 50) {
+                    index = 0;
+                }
+
+                n = dizi.length();
+                for (j = 0; j < n; j++) {
+                    for (k = 0; k < n; k++) {
+                        //eğer tekrar eden değer bulunursa if in içindeki kod çalışıyor www.bilisimogretmeni.com
+                        if (dizi[j] == dizi[k]) {
+                            //bu for da, dizinin bütün değerleri için ekranda yazdırmanın önüne geçmek için.
+                            //örneğin 2 üç kez tekrar ediyor olabilir ama ekranda sadece bir tane 2nin üç kez girildiğini görmemiz lazım aksi takdirde ekranda kaç kez girildiyse o kadar yazdırıyor. www.bilisimogretmeni.com
+                            for (l = 0; l < j; l++) {
+                                //eğer değerin kaç kez girildiğini önceden yazdırmışsam bunu tekrar yazdırmama gerek yok
+                                if (dizi[l] == dizi[j])
+                                    //sayacı -1 e eşitliyorum çünkü sonrasında 1 artıracak 0 olacak ve en son ekrana yazdırırken sayaç 0 değilse yazdıracak www.bilisimogretmeni.com
+                                    sayac = -1;
+                            }
+                            sayac++;
+                        }
+                    }
+                    if (sayac != 0)
+                        document.write(dizi[j] + " sayısı " + sayac + " kez tekrar edildi <br>");
+                    sayac = 0;
+                }
+
+
 
 
 
