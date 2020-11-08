@@ -46,6 +46,19 @@
     <div id="resultado4"></div>
     <br>
     <div id="resultado5"></div>
+    <br>
+    <div id="resultado6"></div>
+    <br>
+    <div id="resultado7"></div>
+    <br>
+    <div id="resultado8"></div>
+    <br>
+    <div id="resultado9"></div>
+    <br>
+    <div id="resultado10"></div>
+    <br>
+    <div id="resultado11"></div>
+
     <!--<div id="resultado"></div>-->
 
 
@@ -118,7 +131,7 @@
         let kontrol=0;
         let kontrol2=0;
         let saban;
-
+        let saban2;
         Quagga.onDetected(function (data) {
 
             // document.querySelector('#resultado').innerHTML=data.codeResult.code;
@@ -149,9 +162,26 @@
         sayac1++;
         document.querySelector('#resultado4').innerHTML = "sayac1="+sayac1;
         saban=dizi[i];
+        yeniDizi.push(saban);
         document.querySelector('#resultado5').innerHTML = "saban= "+saban;
+
+
+            for(j=0;j<=10;j++)
+            {
+                kontrol2++;
+                if(yeniDizi[j]==yeniDizi[kontrol2])
+                {
+                    saban2=yeniDizi[j];
+                    document.querySelector('#resultado6').innerHTML = "saban2= "+saban2;
+
+                }
+            }
+
+
     }
         }
+
+        
 
 
 
