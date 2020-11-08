@@ -109,7 +109,8 @@
 
 
 
-let temp=[];
+        let temp = [];
+        let index = 0;
         Quagga.onDetected(function (data) {
 
             // document.querySelector('#resultado').innerHTML=data.codeResult.code;
@@ -119,14 +120,18 @@ let temp=[];
 
             barkodlar[sayac] = data.codeResult.code;
             document.querySelector('#resultado1').innerHTML = data.codeResult.code;
-            if(data.codeResult.code)
-            {
-                temp.push("2");
-                document.querySelector('#resultado2').innerHTML =temp;
+            if (data.codeResult.code) {
+                if (index < 10) {
+                    temp.push(data.codeResult.code);
+                }
 
-                
+
+
+                document.querySelector('#resultado2').innerHTML = temp;
+
+
             }
-            
+
 
 
 
