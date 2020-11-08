@@ -114,9 +114,10 @@
         let index = 0;
         let tekrar = [];
         let deneme;
-        let sayac1=50;
+        let sayac1=51;
         let kontrol=0;
-        
+        let kontrol2=0;
+
         Quagga.onDetected(function (data) {
 
             // document.querySelector('#resultado').innerHTML=data.codeResult.code;
@@ -128,10 +129,11 @@
             document.querySelector('#resultado1').innerHTML = data.codeResult.code;
 
             if (data.codeResult.code) {
-                if (index < 50) {
+                if (index <= 50) {
                     
                     dizi.push(data.codeResult.code);
                     index++;
+                    document.querySelector('#resultado2').innerHTML = index;
                     
 
                 }
@@ -139,14 +141,7 @@
 
 
             }
-            for(let i=0;i<=dizi.length-1;i++){
-                sayac1--;
-                if(dizi[i]==dizi[sayac1]){
-                    kontrol++;
-                    document.querySelector('#resultado2').innerHTML = kontrol;
-                }
-
-            }
+            
            
 
 
@@ -154,6 +149,7 @@
 
         });
 
+        
 
 
 
