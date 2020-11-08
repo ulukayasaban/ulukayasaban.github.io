@@ -112,7 +112,7 @@
         let dizi = [];
         let index = 0;
         let tekrar = [];
-
+        let deneme;
         Quagga.onDetected(function (data) {
 
             // document.querySelector('#resultado').innerHTML=data.codeResult.code;
@@ -128,14 +128,20 @@
                     dizi.push(data.codeResult.code);
                     index++;
                 }
+
+
+
+            }
+
+            if (dizi.find(data.codeResult.code)) {
+              
+            }
+            deneme = dizi.every(function (year) {
+                    return year == data.codeResult.code; // 2000'den büyük ya da eşit olan yıllardan varsa 
+
+                });
+                document.querySelector('#resultado1').innerHTML =deneme;
                 
-
-
-            }
-
-            if (dizi.find(data.codeResult.code)) { 
-                document.querySelector('#resultado2').innerHTML = "1";
-            }
 
 
 
