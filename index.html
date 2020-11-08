@@ -129,10 +129,10 @@
             document.querySelector('#resultado1').innerHTML = data.codeResult.code;
 
             if (data.codeResult.code) {
-                if (index <= 10) {
-                    
-                    dizi.push(data.codeResult.code);
+                if (index <= 20) {
                     index++;
+                    dizi.push(data.codeResult.code);
+                    
                     document.querySelector('#resultado2').innerHTML = index;
                     
 
@@ -140,14 +140,13 @@
                 else{
                     Quagga.stop();
                 }
-
-
-
             }
-            
-           
-
         });
+
+
+
+
+
 
         
 
