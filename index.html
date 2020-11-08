@@ -110,9 +110,13 @@
 
 
         let dizi = [];
+        let yeniDizi=[];
         let index = 0;
         let tekrar = [];
         let deneme;
+        let sayac1=0;
+        let kontrol=0;
+        
         Quagga.onDetected(function (data) {
 
             // document.querySelector('#resultado').innerHTML=data.codeResult.code;
@@ -125,23 +129,26 @@
 
             if (data.codeResult.code) {
                 if (index < 50) {
+                    
                     dizi.push(data.codeResult.code);
                     index++;
+                    
+
                 }
 
 
 
             }
+            for(let i=0;i<=dizi.length-1;i++){
+                sayac1++;
+                if(dizi[i]==dizi[sayac1]){
+                    kontrol++;
+                    document.querySelector('#resultado1').innerHTML = kontrol;
+                }
 
-            if (dizi.find(data.codeResult.code)) {
-              
             }
-            deneme = dizi.every(function (year) {
-                    return year == data.codeResult.code; // 2000'den büyük ya da eşit olan yıllardan varsa 
+           
 
-                });
-                document.querySelector('#resultado1').innerHTML =deneme;
-                
 
 
 
