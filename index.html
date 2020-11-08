@@ -1,144 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <link rel="stylesheet" type="text/css" href="style.css"> 
-	
-	<link href="bootstrap.min.css" rel="stylesheet">
-	
-	<link href="blog-home.css" rel="stylesheet">
-	
-	  <script src="jquery.min.js"></script>
-  <script src="bootstrap.bundle.min.js"></script>
-	
-	
-	
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <link href="blog-home.css" rel="stylesheet">
+
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+
+
+
     <script src="quagga.min.js"></script>
     <title>Barkod Okuyucu</title>
 </head>
+
 <body>
     <!--		-->
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div id="resultado1"></div>
-	<br>
-	<br>
-	<div id="resultado2"></div>
-	<br>
-	<div id="resultado3"></div>
-	<br>
-	<div id="resultado4"></div>
-	<br>
-	<div id="resultado5"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="resultado1"></div>
+    <br>
+    <br>
+    <div id="resultado2"></div>
+    <br>
+    <div id="resultado3"></div>
+    <br>
+    <div id="resultado4"></div>
+    <br>
+    <div id="resultado5"></div>
     <!--<div id="resultado"></div>-->
-	
-	
-	<br>
-	<br>
+
+
+    <br>
+    <br>
     <div id="camera"></div>
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script>
 
-Quagga.init({
-    inputStream : {
-      name : "Live",
-      type : "LiveStream",
-      target: document.querySelector('#camera')   
-    },
-    decoder : {
-      readers : ["code_128_reader", "ean_reader"]
-    }
-  }, function(err) {
-      if (err) {
-          console.log(err);
-          return
-      }
-      console.log("Initialization finished. Ready to start");
-	document.querySelector('#resultado2').innerHTML="okunuyorr";
-	
-      Quagga.start();
-	
-  });
+        Quagga.init({
+            inputStream: {
+                name: "Live",
+                type: "LiveStream",
+                target: document.querySelector('#camera')
+            },
+            decoder: {
+                readers: ["code_128_reader", "ean_reader"]
+            }
+        }, function (err) {
+            if (err) {
+                console.log(err);
+                return
+            }
+            console.log("Initialization finished. Ready to start");
+            document.querySelector('#resultado2').innerHTML = "okunuyorr";
 
-        var barkodlar=['1','2','3','4','5'];
-        var sayac=0;
+            Quagga.start();
 
-		
-        
-		
-		
-		
-			
-			
-			
-			
-		
-		
-		
-			
-			Quagga.onDetected(function(data){
-            
-               // document.querySelector('#resultado').innerHTML=data.codeResult.code;
-			   //document.querySelector('#resultado1').innerHTML=data1.codeResult.code;
-				
-				sayac++;
-				
-				barkodlar[sayac]=data.codeResult.code;
-					document.querySelector('#resultado1').innerHTML=data.codeResult.code;
-				
-					document.querySelector('#resultado2').innerHTML=barkodlar[sayac];
-				
-				
         });
-			
-			
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
+        var barkodlar = ['1', '2', '3', '4', '5'];
+        var sayac = 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        Quagga.onDetected(function (data) {
+
+            // document.querySelector('#resultado').innerHTML=data.codeResult.code;
+            //document.querySelector('#resultado1').innerHTML=data1.codeResult.code;
+
+            sayac++;
+
+            barkodlar[sayac] = data.codeResult.code;
+            document.querySelector('#resultado1').innerHTML = data.codeResult.code;
+
+            document.querySelector('#resultado2').innerHTML = barkodlar[sayac];
+
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -149,4 +149,5 @@ Quagga.init({
 
 
 </body>
+
 </html>
